@@ -9,6 +9,7 @@ import array as arr
 import random
 
 class Puzzle:
+    # data class to create and fill playing field
     def __init__(self):
         self.field = arr.array('i', [0, 1, 2, 3, 4, 5, 6, 7, 8])
 
