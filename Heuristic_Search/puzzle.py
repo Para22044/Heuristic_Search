@@ -6,10 +6,13 @@
 #           - "Conditions & Neighbors" alle möglichen nächsten Zustände durch Verschieben eines Steines erzeugen
 
 import array as arr
+import random
 
 class Puzzle:
-    
-    field = arr.array('i')
+    # data class to create and fill playing field
+    def __init__(self):
+        self.field = arr.array('i', [0, 1, 2, 3, 4, 5, 6, 7, 8])
 
-    # def fill_field
-    
+    def fill_field(self):
+        random.shuffle(self.field)
+        
