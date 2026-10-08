@@ -13,6 +13,5 @@ class Puzzle:
         self.field = arr.array('i', [0, 1, 2, 3, 4, 5, 6, 7, 8])
 
     def fill_field(self):
-        temp_list = list(self.field)
-        random.shuffle(temp_list)
-        self.field = arr.array('i', temp_list)
+        random.shuffle(self.field)
+        
