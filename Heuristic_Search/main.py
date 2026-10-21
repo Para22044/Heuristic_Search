@@ -3,5 +3,12 @@
 # Aufgaben: - Verbindet die Module miteinander.
 #           - Tests und Vergleiche
 
-print("Hello World!")
-print("Heuristic Search funktioniert!")
+from benchmark import Benchmark
+
+benchmark = Benchmark()
+
+print("--- Start of Benchmark ---")
+
+benchmark.start_test()
+
+print("--- End of Benchmark ---")
