@@ -1,6 +1,14 @@
 from typing import Final
 
 class Solvable:
+    """Contains a function to check the solvability of 8-Puzzle states.
+
+    ==================  ==================================================
+    Function            Description
+    ==================  ==================================================
+    solvable            Check the solvability of an 8-Puzzle state.
+    """
+    
     def solvable(array: int):
         """Check the solvability of an 8-Puzzle state.
 

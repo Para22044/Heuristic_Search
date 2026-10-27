@@ -1,14 +1,17 @@
-# Start
-
-# Aufgaben: - Verbindet die Module miteinander.
-#           - Tests und Vergleiche
-
 from benchmark import Benchmark
 
-benchmark = Benchmark()
+def main():
+    """First function that is called on script execution.
+    Calls the other functions.
+    """
 
-print("--- Start of Benchmark ---")
+    benchmark = Benchmark()
 
-benchmark.start_test()
+    print("--- Start of Benchmark ---")
 
-print("--- End of Benchmark ---")
+    benchmark.start_test()
+
+    print("--- End of Benchmark ---")
+
+if __name__ == '__main__':
+    main()

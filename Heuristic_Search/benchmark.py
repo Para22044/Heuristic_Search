@@ -13,11 +13,24 @@ from puzzle import Puzzle
 from solvable import Solvable
 
 class Benchmark:
+    """Class containing benchmark functions to test the performance of different heuristics.
+
+    ==================  ==================================================
+    Function            Description
+    ==================  ==================================================
+    start_test          Generates 100 solvable puzzles and tests both heuristics.
+    measure             Measures runtime and expanded nodes.
+    """
     
     # Input: None
     # Output: Initailized benchmark object
     # Function: Initializes heuristic and puzzle
     def __init__(self):
+        """Initializes variables "self.hamming", "self.manhatten" and "self.puzzle".
+        
+        :parameter self:
+        """
+        
         self.hamming = Hamming()
         self.manhatten = Manhatten()
         self.puzzle = Puzzle()
@@ -26,6 +39,11 @@ class Benchmark:
     # Output: Benchmark results
     # Function: Generates 100 solvable puzzles and tests both heuristics
     def start_test(self):
+        """Generates 100 solvable puzzles and tests both heuristics.
+
+        :parameter self:
+        """
+        
         puzzles = []
 
         for i in range (100):
@@ -47,6 +65,13 @@ class Benchmark:
     # Output: Mean and standard deviation
     # Function: Measure runtime and expanded nodes
     def measure(self, heuristic, puzzles):
+        """Measures runtime and expanded nodes.
+
+        :parameter self:
+        :parameter heuristic: Type of heuristic to be used
+        :parameter puzzles: Puzzles states
+        """
+        
         times = []
         expanded_nodes = []
 

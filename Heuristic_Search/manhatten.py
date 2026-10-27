@@ -5,14 +5,35 @@
 
 import heapq
 
-class Manhattan:
+class Manhatten:
+    """Class containing functions for the Manhatten heuristic.
+
+    ==================  ==================================================
+    Function            Description
+    ==================  ==================================================
+    manhatten_distance  Estimates the distance to the goal state.
+    solve               Solves the 8-puzzle using A* and Manhatten.
+    """
+
     def __init__(self):
+        """Initializes tuple variable "self.goal".
+        
+        :parameter self:
+        """
+        
         self.goal = (1, 2, 3, 4, 5, 6, 7, 8, 0) # Goal state of the 8-puzzle
 
     # Input: Current puzzle state (array)
     # Output: Manhatten distance (int)
     # Function: Estimates the distance to the goal state
-    def manhattan_distance(self, field):
+    def manhatten_distance(self, field):
+        """Estimates the distance to the goal state.
+        
+        :parameter self:
+        :parameter field: Current puzzle state (array)
+        :return: Manhatten distance (int)
+        """
+        
         distance = 0
         
         for index, tile in enumerate(field):
@@ -34,10 +55,17 @@ class Manhattan:
     # Output: Number of moves and expanded nodes (int)
     # Function: Solves the 8-puzzle using A* and Manhatten
     def solve(self, field):
+        """Solves the 8-puzzle using A* and Manhatten.
+        
+        :parameter self:
+        :parameter field: Initial puzzle state (array)
+        :return: Number of moves and expanded nodes (int)
+        """
+        
         start = tuple(field)
 
         # Priority queue: (f, g, state)
-        queue = [(self.manhattan_distance(start), 0, start)]
+        queue = [(self.manhatten_distance(start), 0, start)]
         visited = {start: 0}    # Best known cost for each state
 
         expanded_nodes = 0
@@ -92,7 +120,7 @@ class Manhattan:
                     visited[new_state] = new_g
 
                     # Calculates the heuristic
-                    h = self.manhattan_distance(new_state)
+                    h = self.manhatten_distance(new_state)
 
                     # A*: f(n) = g(n) + h(n)
                     new_f = new_g + h

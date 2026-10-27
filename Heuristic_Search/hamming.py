@@ -4,3 +4,12 @@
 #           - Verwendung der Heuristiken, um den besten Weg zum Ziel zu finden.
 #           - Berechnung der Anzahl der benötigten Schritte.
 #           - "Expanded Nodes" Zählt die expandierten Knoten.
+
+class Hamming:
+    """Class containing functions for the Hamming heuristic.
+
+    ==================  ==================================================
+    Function            Description
+    ==================  ==================================================
+    -
+    """
