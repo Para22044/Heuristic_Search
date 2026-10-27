@@ -74,7 +74,7 @@ class Manhatten:
             f, g, current = heapq.heappop(queue)
 
             if current == self.goal:
-                return g
+                return g, expanded_nodes
             
             # Skips outdated entries
             if g > visited[current]:
@@ -130,4 +130,4 @@ class Manhatten:
                         (new_g + h, new_g, new_state)
                     )
 
-        return None, expanded_nodes
+        return g, expanded_nodes

@@ -83,7 +83,7 @@ class Benchmark:
             start_time = time.perf_counter()
 
             # Solves puzzle
-            moves, nodes = heuristic.sovle(field)
+            moves, nodes = heuristic.solve(field)
 
             # Stops the measeurement
             end_time = time.perf_counter()

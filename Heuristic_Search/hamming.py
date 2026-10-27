@@ -13,3 +13,13 @@ class Hamming:
     ==================  ==================================================
     -
     """
+
+    def solve(self, field):
+        """Solves the 8-puzzle using A* and Manhatten.
+        
+        :parameter self:
+        :parameter field: Initial puzzle state (array)
+        :return: Number of moves and expanded nodes (int)
+        """
+
+        return 0, 0
