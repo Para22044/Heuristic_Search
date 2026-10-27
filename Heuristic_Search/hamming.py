@@ -11,7 +11,7 @@ class Hamming:
     ==================  ==================================================
     Function            Description
     ==================  ==================================================
-    -
+    solve               Solves the 8-puzzle using A* and Manhatten.
     """
 
     def solve(self, field):
