@@ -8,7 +8,7 @@ import time
 import statistics
 
 from hamming import Hamming
-from manhatten import Manhatten
+from manhattan import Manhattan
 from puzzle import Puzzle
 from solvable import Solvable
 
@@ -26,13 +26,13 @@ class Benchmark:
     # Output: Initailized benchmark object
     # Function: Initializes heuristic and puzzle
     def __init__(self):
-        """Initializes variables "self.hamming", "self.manhatten" and "self.puzzle".
+        """Initializes variables "self.hamming", "self.manhattan" and "self.puzzle".
         
         :parameter self:
         """
         
         self.hamming = Hamming()
-        self.manhatten = Manhatten()
+        self.manhattan = Manhattan()
         self.puzzle = Puzzle()
 
     # Input: None
@@ -59,7 +59,7 @@ class Benchmark:
 
         # Tests both heuristics with the same puzzles
         self.measure(self.hamming, puzzles)
-        self.measure(self.manhatten, puzzles)
+        self.measure(self.manhattan, puzzles)
 
     # Input: Heuristic object and 100 puzzles states
     # Output: Mean and standard deviation
