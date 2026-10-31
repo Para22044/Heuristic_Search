@@ -15,6 +15,7 @@ class Hamming:
     ==================  ==================================================
     Function            Description
     ==================  ==================================================
+    hamming_distance    Counts the tiles that are not in their goal positions.
     solve               Solves the 8-puzzle using A* and Hamming.
     """
 
