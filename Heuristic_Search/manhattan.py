@@ -5,14 +5,14 @@
 
 import heapq
 
-class Manhatten:
-    """Class containing functions for the Manhatten heuristic.
+class Manhattan:
+    """Class containing functions for the Manhattan heuristic.
 
     ==================  ==================================================
     Function            Description
     ==================  ==================================================
     manhatten_distance  Estimates the distance to the goal state.
-    solve               Solves the 8-puzzle using A* and Manhatten.
+    solve               Solves the 8-puzzle using A* and Manhattan.
     """
 
     def __init__(self):
@@ -24,14 +24,14 @@ class Manhatten:
         self.goal = (1, 2, 3, 4, 5, 6, 7, 8, 0) # Goal state of the 8-puzzle
 
     # Input: Current puzzle state (array)
-    # Output: Manhatten distance (int)
+    # Output: Manhattan distance (int)
     # Function: Estimates the distance to the goal state
-    def manhatten_distance(self, field):
+    def manhattan_distance(self, field):
         """Estimates the distance to the goal state.
         
         :parameter self:
         :parameter field: Current puzzle state (array)
-        :return: Manhatten distance (int)
+        :return: Manhattan distance (int)
         """
         
         distance = 0
@@ -65,7 +65,7 @@ class Manhatten:
         start = tuple(field)
 
         # Priority queue: (f, g, state)
-        queue = [(self.manhatten_distance(start), 0, start)]
+        queue = [(self.manhattan_distance(start), 0, start)]
         visited = {start: 0}    # Best known cost for each state
 
         expanded_nodes = 0
@@ -120,7 +120,7 @@ class Manhatten:
                     visited[new_state] = new_g
 
                     # Calculates the heuristic
-                    h = self.manhatten_distance(new_state)
+                    h = self.manhattan_distance(new_state)
 
                     # A*: f(n) = g(n) + h(n)
                     new_f = new_g + h

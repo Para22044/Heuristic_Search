@@ -113,5 +113,5 @@ class Benchmark:
         print(f" Heuristic: {heuristic.__class__.__name__}")
         print(f" Mean Time: {mean_time:.6f}s")
         print(f" Standard Deviation Time: {std_time:.6f}s")
-        print(f"Mean Expanded Nodes: {mean_nodes:.2f}")
-        print(f"Standard Deviation Nodes: {std_nodes:.2f}")
+        print(f" Mean Expanded Nodes: {mean_nodes:.2f}")
+        print(f" Standard Deviation Nodes: {std_nodes:.2f}")
