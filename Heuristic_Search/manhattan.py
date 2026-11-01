@@ -37,7 +37,7 @@ class Manhattan:
         distance = 0
         
         for index, tile in enumerate(field):
-            if tile != 0:   # Ignores the empty field
+            if tile == 0:   # Ignores the empty field
                 continue
             
             current_row = index // 3
